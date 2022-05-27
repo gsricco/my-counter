@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import {Display} from "./Display";
+import UneversalButton from "./UneversalButton";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    let [counter, setCounter] = useState<number>(0);
+
+    // const changeCounter = (value: number) => {setCounter(value);}
+    const resetCounter = () => {setCounter(0);}
+    const changeCounter1 = () => {if(counter<5) setCounter(counter + 1);}
+
+    return (
+        <div className="App">
+            <div className={'content'}>
+                <Display counter={counter}/>
+                {/*<Button*/}
+                {/*    counter={counter}*/}
+                {/*    changeCounter={changeCounter}/>*/}
+                <div className={'buttons'}>
+                    <UneversalButton name={'inc'}  disable={counter === 5} callBack={changeCounter1}/>
+                    <UneversalButton name={'reset'} disable={counter === 0} callBack={resetCounter}/>
+                </div>
+            </div>
+        </div>
+    );
 }
 
 export default App;
+
