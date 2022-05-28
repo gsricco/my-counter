@@ -1,12 +1,25 @@
 .App {
-  min-height: 600px;
-
+  min-height: 100vh;
   padding: 30px;
-  /*display: flex;*/
+  display: flex;
   background: dimgray;
+  justify-content: center;
   align-items: center;
 }
-
+.info{
+  position: absolute;
+  top:50px;
+  font-size: 30px;
+  font-weight: bold;
+  color: cyan;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 3px black;
+  cursor: pointer;
+}
+.info:hover{
+  color: olive;
+  text-shadow: 2px 2px 3px cyan;
+}
 .App > div {
   margin-right: 50px;
 }
@@ -20,9 +33,25 @@
   justify-content: center;
   /*align-items: center;*/
   text-align: center;
-
+  box-shadow: 2px 2px 3px black;
 }
-.good {
+.goodValue{
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  height: 150px;
+  border: 2px solid cyan;
+  border-radius: 10px;
+  margin: 10px;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+  color: cyan;text-shadow: 2px 2px 3px black;
+  box-shadow: 2px 2px 3px black;
+}
+
+.goodInc, .stop  {
   display: flex;
   width: 90%;
   height: 150px;
@@ -33,21 +62,48 @@
   justify-content: center;
   font-size: 60px;
   font-weight: bold;
-  background: cyan;
+  text-shadow: 2px 2px 3px black;
+  box-shadow: 2px 2px 3px black;
+}
+.goodInc {
+  color: cyan;
 }
 .stop {
-  display: flex;
-  width: 90%;
-  height: 150px;
+  color:red;
+}
+.message{
+  font-size: 20px;
+  color: cyan;
+  text-shadow: 2px 2px 3px black;
+}
+.error{
+  padding: 0 10px 5px;
+  color:red;
+  text-shadow: 2px 2px 3px white;
+}
+.correct{
+  outline: 1px solid cyan;
+  margin: 5px;
+  font-size: 20px;
+  width: 50px;
+  border: 2px solid cyan;
+  border-radius: 10px;
+  font-weight: bold;
+  text-align: center;
+  color: black;
+  box-shadow: 2px 2px 3px black;
+}
+.ignor{
+  outline: 1px solid red;
+  background: #ff8880;
+  margin: 5px;
+  font-size: 20px;
+  width: 50px;
   border: 2px solid red;
   border-radius: 10px;
-  margin: 10px;
-  align-items: center;
-  justify-content: center;
-  font-size: 60px;
   font-weight: bold;
-  color:red;
-  background: blanchedalmond;
+  text-align: center;
+  box-shadow: 2px 2px 3px white;
 }
 .buttons {
   display: flex;
@@ -55,7 +111,8 @@
   border: 2px solid cyan;
   border-radius: 10px;
   margin: 5px;
-  justify-content: space-between;
+  justify-content: center;
+  box-shadow: 2px 2px 3px black;
 }
 .button {
   padding: 0 10px;
@@ -65,13 +122,21 @@
   margin: 10px;
   border: 2px solid cyan;
   border-radius: 10px;
+  box-shadow: 2px 2px 3px black;
 }
 .button1 {
   padding: 0 10px;
   font-size: 40px;
   font-weight: bold;
-  background: gray;
+  background: cyan;
   margin: 10px;
   border: 2px solid cyan;
   border-radius: 10px;
+  box-shadow: 2px 2px 3px black;
+}
+.button1:hover{
+  background: olive;
+  border: 2px solid olive;
+  box-shadow: 2px 2px 3px cyan;
+  text-shadow: 2px 2px 3px cyan;
 }
