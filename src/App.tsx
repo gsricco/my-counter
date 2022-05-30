@@ -81,6 +81,9 @@ function App() {
                     <UneversalButton name={'set'} disable={condition} callBack={onSetCounter}/>
                 </div>
             </div>
+            {condition&&<img className={'pic'}
+                  src="https://downloadwap.com/thumbs3/screensavers/d/new/cartoon-anime/bart_eyes-23642.gif" alt={''}/>}
+
             <div className={'content'}>
                 <DisplayCounter counter={counter} maxValue={maxValue} message={message} condition={condition}/>
                 <div className={'buttons'}>

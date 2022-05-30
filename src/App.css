@@ -7,15 +7,31 @@
   align-items: center;
 }
 .info{
+  /*display: flex;*/
   position: absolute;
-  top:50px;
+  top:55px;
+  left:100px;
   font-size: 30px;
   font-weight: bold;
   color: cyan;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   text-shadow: 2px 2px 3px black;
   cursor: pointer;
 }
+.info p{
+  color:transparent;
+  font-weight: normal;
+  text-shadow:none;
+}
+.info img{
+  position: relative;
+  width: 35px;
+}
+.info:hover p{
+  color:cyan;
+  text-shadow: 2px 2px 3px black;
+}
+
 .info:hover{
   color: olive;
   text-shadow: 2px 2px 3px cyan;
@@ -26,6 +42,7 @@
 .content  {
   display: flex;
   flex-wrap: wrap;
+  margin:50px;
   width: 300px;
   min-height: 200px;
   border: 2px solid cyan;
@@ -135,8 +152,18 @@
   box-shadow: 2px 2px 3px black;
 }
 .button1:hover{
-  background: olive;
+  /*background: olive;*/
   border: 2px solid olive;
   box-shadow: 2px 2px 3px cyan;
   text-shadow: 2px 2px 3px cyan;
+}
+.button1:active{
+  background:transparent;
+}
+.pic{
+  width: 100px;
+  position: absolute;
+  transform: scale(-1, 1)
+  /*right: 220px;*/
+
 }
